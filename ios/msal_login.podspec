@@ -8,16 +8,16 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC 
   A new flutter plugin project. 
   DESC
-  s.homepage         = 'https://github.com/AzureAD/microsoft-authentication-library-for-objc.git'
+  s.homepage         = 'https://github.com/AzureAD/microsoft-authentication-library-for-objc'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'FSC' => '' }
+  s.author           = { 'FSC' => 'fsconceicao@hotmail.com' }
   s.source           = { :path => '.' }
-  s.source_files = '/ios/login.swift'
-  s.public_header_files = '/ios/login.swift'
+  s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
   s.dependency 'MSAL', '~> 1.1.1'
 
   s.swift_version = '4.0'
   s.ios.deployment_target = '11.0'
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
 end
 
